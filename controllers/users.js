@@ -1,9 +1,8 @@
-const Model = require("../models");
+const {user} = require("../models");
 
 const bcrypt = require('bcrypt');
 const saltRounds = 10;   
-
-const Users = Model.Users;
+const Users = user;
 //===============================
   exports.islogin = async(req, res) => {
       if (!req.body.Email && !req.body.Password) {
